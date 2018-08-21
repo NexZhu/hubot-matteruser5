@@ -1,6 +1,6 @@
 {
-  "name": "hubot-matteruser",
-  "version": "4.4.0",
+  "name": "hubot-matteruser5",
+  "version": "5.1.1",
   "author": {
     "name": "Andy Lo-A-Foe",
     "url": "https://aemian.com/"
@@ -16,7 +16,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/loafoe/hubot-matteruser.git"
+    "url": "https://github.com/NexZhu/hubot-matteruser5.git"
   },
   "bugs": {
     "url": "https://github.com/loafoe/hubot-matteruser/issues",
