@@ -208,8 +208,8 @@ send(envelope, ...strings) {
         let channel_id = channel ? channel.id : undefined;
 
         for (str of strings) {
-            this.client.postMessage(str, 
-                                    (channel || envelope.room)); 
+            this.client.postMessage(str,
+                                    (channel_id || envelope.room));
         }
     } else {
         // If it is, we assume they want to DM that user
@@ -220,7 +220,7 @@ send(envelope, ...strings) {
 
         if (dm_channel_id != null) {
             for (str of strings) {
-                this.client.postMessage(str, user.mm.dm_channel_id); 
+                this.client.postMessage(str, user.mm.dm_channel_id);
             }
 
         } else {
@@ -299,7 +299,7 @@ message(msg) {
     user.room = mmPost.channel_id;
     user.room_name = msg.data.channel_display_name;
     user.channel_type = msg.data.channel_type;
-    
+
     let text = mmPost.message;
     if (msg.data.channel_type === 'D') {
       if (!new RegExp(`^@?${this.robot.name}`, 'i').test(text)) { // Direct message
